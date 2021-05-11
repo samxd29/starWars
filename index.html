@@ -20,7 +20,7 @@
             <img src="img/dashboard.svg" />
             <p>Dashboard</p>
           </li>
-          <li>
+          <li id="personagensMenu">
             <img src="img/personagens.svg" />
             <p>Personagens</p>
           </li>
@@ -80,10 +80,27 @@
         </div>
       </div>
       <div class="content-info">
-        <div class="table">
+        <div class="table" id="divPrincipal">
           <h5>Últimos Filmes</h5>
           <p>Saiba os últimos lançamentos da marca</p>
           <table id="filmsTable">
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Estréia</th>
+                <th>Diretor</th>
+                <th>Episódio</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="tableHidden" id="divPersonagens">
+          <h5>Filmes por personagens</h5>
+          <p>Saiba quais filmes cada personagem participou</p>
+          <select id='selectPersonagens'>
+          </select>
+          <table id="filmsTablePersonagens">
             <thead>
               <tr>
                 <th>Título</th>
@@ -110,7 +127,9 @@
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="util.js"></script>
   <script src="index.js"></script>
+  <script src="personagens.js"></script>
 </body>
 
 </html>

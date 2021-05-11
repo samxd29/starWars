@@ -55,16 +55,5 @@ async function preencherTabela() {
   const response = await swapiGet("films/");
   const tableData = response.data.results;
   console.log(tableData);
-  tableData.forEach((film) => {
-    $("#filmsTable").append(`<tr>
-      <td>${film.title}</td>
-      <td>${moment(film.release_data).format("DD/MM/YYYY")}</td>
-      <td>${film.director}</td>
-      <td>${film.episode_id}</td>
-    </tr>`);
-  });
-}
-
-function swapiGet(param) {
-  return axios.get(`https://swapi.dev/api/${param}`);
+  preencherTabelaFilmes('#filmsTable', tableData)
 }
