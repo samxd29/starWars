@@ -8,6 +8,7 @@ const navesContador = document.getElementById("naves");
 
 preenchaContador();
 preencherTabela();
+preencherTabelaP();
 
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(desenhaGrafico);
@@ -56,4 +57,11 @@ async function preencherTabela() {
   const tableData = response.data.results;
   console.log(tableData);
   preencherTabelaFilmes('#filmsTable', tableData)
+}
+
+async function preencherTabelaP() {
+  const response = await swapiGet("planets/");
+  const tableData = response.data.results;
+  console.log(response);
+  preencherTabelaPlanetas('#planetaTable', tableData)
 }

@@ -24,7 +24,7 @@
             <img src="img/personagens.svg" />
             <p>Personagens</p>
           </li>
-          <li>
+          <li id="planetsMenu">
             <img src="img/planetas.svg" />
             <p>Planetas e luas</p>
           </li>
@@ -112,6 +112,23 @@
             <tbody></tbody>
           </table>
         </div>
+        <!-- Tabela planetas-->
+        <div class="tableHidden" id="divPlanets">
+          <h5>Informações sobre os Planetas</h5>
+          <p>Saiba quais planetas aparecem nos filmes</p>
+          <select id='selectPlanetas'></select>
+          <table id='planetaTable'>
+            <thead>
+              <tr>
+                <th>Clima</th>
+                <th>Nome</th>
+                <th>Diâmetro</th>
+                <th>População</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
 
         <div class="chart">
           <div id="piechart" style="width: 400px; height: 400px;"></div>
@@ -130,6 +147,7 @@
   <script src="util.js"></script>
   <script src="index.js"></script>
   <script src="personagens.js"></script>
+  <script src="planeta.js"></script>
 </body>
 
 </html>

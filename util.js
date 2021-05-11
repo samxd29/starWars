@@ -16,3 +16,14 @@ function preencherTabelaFilmes(tableId, list) {
         </tr>`);
     });
 }
+
+function preencherTabelaPlanetas(tableId, list) {
+    list.forEach((planets) => {
+        $(tableId).append(`<tr>
+            <td>${planets.climate}</td>
+            <td>${planets.name}</td>
+            <td>${planets.diameter}</td>
+            <td>${planets.population}</td>
+        </tr>`);
+    });
+}
